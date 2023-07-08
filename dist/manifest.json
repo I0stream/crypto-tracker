@@ -1,0 +1,28 @@
+{
+  "name": "CryptoTracker",
+  "description": "Sample Extension using Svelte and Tailwind",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "src/popup/index.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [
+    {
+      "use_dynamic_url": true,
+      "matches": [
+        "<all_urls>"
+      ],
+      "resources": [
+        "**/*",
+        "*"
+      ]
+    }
+  ]
+}
